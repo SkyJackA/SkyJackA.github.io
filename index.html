@@ -1,7 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Spine Animation Viewer</title>
   <script src="https://unpkg.com/@esotericsoftware/spine-player@4.2.*/dist/iife/spine-player.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/@esotericsoftware/spine-player@4.2.*/dist/spine-player.css">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #111;
+      height: 100%;
+    }
+    #player {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="player"></div>
+  <script>
+    window.addEventListener("DOMContentLoaded", () => {
+      new spine.SpinePlayer("player", {
+        jsonUrl: "102173.json",       // ← Make sure this matches your filename
+        atlasUrl: "102173.atlas",     // ← And this too
+        assetUrl: "./",                  // Folder where the .png and .atlas live
+        backgroundColor: "#111111",
+        showControls: true,
+        alpha: true,
+        viewport: {
+          debugRender: false
+        }
+      });
+    });
+  </script>
+</body>
+</html>
