@@ -5,31 +5,3 @@
   <title>Spine Animation Viewer</title>
   <script src="https://unpkg.com/@esotericsoftware/spine-player@4.2.*/dist/iife/spine-player.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/@esotericsoftware/spine-player@4.2.*/dist/spine-player.css">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      background: #111;
-      height: 100%;
-    }
-    #player {
-      width: 100vw;
-      height: 100vh;
-    }
-  </style>
-</head>
-<body>
-  <div id="player"></div>
-  <script>
-    new spine.SpinePlayer("player", {
-      jsonUrl: "animation.json",
-      atlasUrl: "animation.atlas",
-      assetUrl: "./",
-      backgroundColor: "#111111",
-      showControls: true,
-      preserveDrawingBuffer: true,
-      alpha: true
-    });
-  </script>
-</body>
-</html>
